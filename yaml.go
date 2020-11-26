@@ -321,9 +321,9 @@ func getStructInfo(st reflect.Type) (*structInfo, error) {
 	inlineMap := -1
 	for i := 0; i != n; i++ {
 		field := st.Field(i)
-		if field.PkgPath != "" && !field.Anonymous {
-			continue // Private field
-		}
+		// if field.PkgPath != "" && !field.Anonymous {
+		//	continue // Private field
+		// }
 
 		info := fieldInfo{Num: i}
 
